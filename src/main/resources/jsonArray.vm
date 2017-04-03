@@ -1,0 +1,12 @@
+#set($numMessages = $data.size())
+#set($count = 0)
+
+[
+#foreach($x in $data)
+    "$x"
+    #set($count = $count+1)
+    #if($count != $numMessages)
+        ,
+    #end
+#end
+]
